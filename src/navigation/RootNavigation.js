@@ -13,8 +13,7 @@ export function RootNavigation() {
         animated
         barStyle={darkMode ? "light-content" : "dark-content"}
       />
-      {/* {auth ? <AppNavigation /> : <AuthNavigation />} */}
-      <AppNavigation /> 
+      {auth ? <AppNavigation /> : <AuthNavigation />}
     </>
   );
 }
