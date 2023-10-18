@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorGris2"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="MQTT CONNECTION"
+            android:textColor="@color/azul900"
+            android:textColorHighlight="@color/azul900"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/connBtn"
+                android:layout_width="128dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/button_black_rounded"
+                android:text="connect"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.179"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <Button
+                android:id="@+id/disconnBtn"
+                android:layout_width="128dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_black_rounded"
+                android:onClick="disconn"
+                android:text="disconnect"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.748"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAnotherServer"
+            android:layout_width="300dp"
+            android:layout_height="42dp"
+            android:text="CONNECT WITH ANOTHER SERVER"
+            android:background="@drawable/button_black_rounded"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"/>
+
+        <LinearLayout
+            android:id="@+id/llContenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+
+          >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="20dp"
+                android:text="BROKER ADRESS + PORT"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/newBroker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="USERNAME"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/newUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="PASSWORD"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/newPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <Button
+                android:id="@+id/connectAnotherServer"
+                android:layout_width="300dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_black_rounded"
+                android:text="CONNECT WITH A NEW SERVER"
+                android:layout_gravity="center"
+                 />
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="128dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/button_black_rounded"
+                android:text="PUBLISH"
+                android:onClick="published"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.179"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <Button
+                android:id="@+id/btnSuscribe"
+                android:layout_width="128dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button_black_rounded"
+                android:text="SUSCBRIBE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.748"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
+            android:text="TOPIC FOR SUSCRIBE"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/topicSuscribe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="TOPIC FOR PUBLISH"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/topicPublish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="MESSAGE"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+
+        <TextView
+            android:id="@+id/subText"
+            android:layout_width="371dp"
+            android:layout_height="290dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:text="TextView"
+            />
+
+
+    </LinearLayout>
+   </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
